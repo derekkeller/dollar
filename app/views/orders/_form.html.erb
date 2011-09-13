@@ -1,0 +1,25 @@
+<%= form_for @order do |f| %>
+	<div>
+		<%= f.label :number %>
+		<%= f.select :number, (1..100) %>
+	</div>
+	<div>
+		<%= f.label :date_ordered %>
+		<%= f.date_select :date_ordered %>
+	</div>
+	<div>
+		<%= f.label :shipped %>
+		<%= f.select :shipped, [["Yes", 1],["No", 0]], :include_blank => true %>
+	</div>
+	<div>
+		<%= f.label :revenue %>
+		<%= f.text_field :revenue %>
+	</div>
+	<div>
+		<%= f.label :category_id %>
+		<%= f.select :category_id, (Category.all.map { |category| [category.name, category.id] } ), :include_blank => true %>
+	</div>
+	<div>
+		<%= f.submit "Submit" %>
+	</div>
+<% end %>

@@ -1,0 +1,22 @@
+<table>
+	<tr>
+		<td class="column_width">Order #</td>
+		<td class="column_width">Date Ordered</td>
+		<td class="column_width">Shipped?</td>
+		<td class="column_width">Revenue</td>
+		<td class="column_width">Category</td>
+		<td class="column_width"></td>
+
+	</tr>
+	<% @filtered_orders.each do |order| %>
+	<tr>
+		<td><%= order.number %></td>
+		<td><%= order.date_ordered %></td>
+		<td><%= order.shipped? ? "Yes" : "No" %></td>
+		<td><%= order.revenue %></td>
+		<td><%= order.category.name %></td>
+		<td><%= link_to "Edit", edit_order_path(order) %> |
+			  <%= link_to "Destroy", order, :confirm => "Are you sure?", :method => :delete %></td>
+	</tr>
+	<% end %>
+</table>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  number: 1
+  shipped: false
+  date_ordered: 2011-09-13
+  revenue: 1
+  category_id: 1
+
+two:
+  number: 1
+  shipped: false
+  date_ordered: 2011-09-13
+  revenue: 1
+  category_id: 1

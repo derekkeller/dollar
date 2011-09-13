@@ -1,0 +1,51 @@
+body {
+	font-family: arial;
+	letter-spacing: -.08em;
+}
+
+td.column_width {
+	width: 100px;
+}
+
+div.success {
+	background-color: #CDE7CA;
+	border: 1px solid #3D9933;
+}
+
+div.failure {
+	background-color: #E6A79F;
+	border: 1px solid red;
+}
+
+div.header {
+	background-color: #D3E7E9;
+	border: 1px solid #7CB3B8;
+	border-radius: 5px;
+	padding: 10px;
+}
+
+div.footer {
+	border-top: 1px solid #7CB3B8;	
+	margin-top: 50px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #1D929C;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #1D929C;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #7895BB;
+}
+
+div.filter {
+	border: 1px solid #9AA0A7;
+	background-color: #DEE1E6;
+	padding: 10px;
+}

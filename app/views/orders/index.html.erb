@@ -1,0 +1,33 @@
+<h1>Order Dashboard</h1>
+
+<div class="filter">
+	<%= form_tag('/orders/order_filter', :remote => true) do %>
+		<div>
+			<%= label_tag :start_month %>
+			<%= select_month(Date.today, :field_name => :start_month) %>			
+		</div>
+		<div>
+			<%= label_tag :start_year %>
+			<%= select_year(Date.today, :field_name => :start_year) %>
+		</div>
+		<div>
+			<%= label_tag :end_month %>
+			<%= select_month(Date.today, :field_name => :end_month) %>
+		</div>
+		<div>
+			<%= label_tag :end_year %>
+			<%= select_year(Date.today, :field_name => :end_year) %>
+		</div>
+		<div>
+			<%= submit_tag "Search" %>
+		</div>
+	<% end %>	
+</div>
+
+<div id="filtered_results_container" >
+	<%= render "filtered_partial" %>
+</div>
+
+<div class="footer">
+	<%= link_to "New Order", new_order_path %>
+</div>
